@@ -13,6 +13,15 @@
 // Write the function to find the calculateTip obtained.
 function calculateTip(amount, rating) {
     //your code here
+    rating=rating.toLowerCase()
+    switch(rating){
+      case "terrible" : return 0
+      case "poor" : return Math.round((5/100)*amount)
+      case "good" : return Math.round((10/100)*amount)
+      case "great" : return Math.round((15/100)*amount)
+      case "excellent" : return Math.round((20/100)*amount)
+      default : return "Rating not recognised"
+    }
   }
 
 //Use SpecRunner to check the Test Cases.
